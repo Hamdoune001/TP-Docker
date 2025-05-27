@@ -1,4 +1,11 @@
-Étape 2 - Tests des commandes Docker
+
+
+
+
+Étape 2 : Tests des commandes Docker
+
+'/home/doune/Pictures/Screenshots/Screenshot from 2025-05-27 03-04-59.png' 
+
 Commandes lancées :
 doune@doune-virtual-machine:~/TP-Docker$ sudo docker run hello-world
 
@@ -252,3 +259,6 @@ docker: permission denied while trying to connect to the Docker daemon socket at
 Run 'docker run --help' for more information
 doune@doune-virtual-machine:~/TP-Docker$ sudo docker run -d -p 80:80 nginx
 debef6f518fbb1ea3703a6f5edb77079bd1011ecabe85aa2217d4533812df7a3
+
+
+![Capture d'écran commande docker](images from commande-nginx.png)
