@@ -14,3 +14,14 @@ doune@doune-virtual-machine:~/TP-Docker$ sudo docker run -d -p 8080:80 -v $(pwd)
 506d13af4b13ae0c318368da25e5b7cac0c6fef99161e18dec13d1c955fb66ba
 
 ![Capture d'écran résultat docker](images from PageBienVenueServerpng)
+
+
+doune@doune-virtual-machine:~/TP-Docker$ sudo docker rm -f great_zhukovsky
+great_zhukovsky
+doune@doune-virtual-machine:~/TP-Docker$ sudo docker run -d --name mynginx -p 8080:80 nginx
+51316fd2772e4d5ceafc61cc09b4f283a65c60d7389e68c913a539b680e40af1
+doune@doune-virtual-machine:~/TP-Docker$ sudo docker cp index.html mynginx:/usr/share/nginx/html/index.html
+Successfully copied 3.07kB to mynginx:/usr/share/nginx/html/index.html
+doune@doune-virtual-machine:~/TP-Docker$ 
+
+[Capture d'écran résultat docker](images from resultat_docker-cp.png>
