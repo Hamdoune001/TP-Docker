@@ -21,3 +21,25 @@ doune@doune-virtual-machine:~/TP-Docker$
 
 Capture pour ok de etape 8
 
+a. À quoi sert le fichier docker-compose par rapport aux commandes docker run ? Pourquoi c’est pratique ?
+Le fichier docker-compose.yml sert à rassembler toutes les infos sur tes conteneurs (images, ports, réseaux, variables, etc.) dans un seul fichier.
+Au lieu d’écrire plusieurs commandes docker run une par une, tu peux tout lancer d’un coup avec une seule commande docker-compose up.
+
+En plus, docker-compose s’occupe de démarrer les conteneurs dans le bon ordre. Par exemple, il attend que la base MySQL soit prête avant de lancer phpMyAdmin.
+
+Ce fichier est super facile à partager, donc n’importe qui peut lancer le même environnement sans se prendre la tête.
+
+Pour arrêter ou redémarrer tout, une seule commande suffit aussi (docker-compose down ou docker-compose restart).
+
+Enfin, c’est très simple d’ajouter ou modifier des services sans taper plein de commandes compliquées.
+
+b. Comment configurer facilement MySQL (utilisateur, base, mot de passe) quand on lance le conteneur ?
+Tu peux passer des variables d’environnement directement dans ton fichier docker-compose.yml ou dans la commande docker run. Par exemple :
+
+MYSQL_ROOT_PASSWORD : pour définir le mot de passe de l’utilisateur root
+
+MYSQL_DATABASE : pour créer automatiquement une base de données à l’init
+
+MYSQL_USER et MYSQL_PASSWORD : pour créer un utilisateur avec son mot de passe
+
+L’image officielle MySQL utilise ces variables pour préparer la base dès le premier démarrage, donc pas besoin de faire ça à la main après.
